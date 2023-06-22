@@ -1,0 +1,108 @@
+/* Reset */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+header {
+  background-color: rgb(111, 91, 66);
+  /* position: fixed; */
+  width: 100%;
+
+}
+
+.left_panel {
+  background-color:navy;
+  display: flex;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  flex-direction: column;
+}
+
+nav {
+  background-color: antiquewhite;
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-top: max(5vh, 30px);
+ 
+}
+
+aside {
+  background-color:crimson;
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 3vh;;
+}
+
+ul.navigation {
+  background-color:aqua;
+  position: relative;
+  list-style-type: none;
+  margin-left: 10%;
+  
+}
+
+.search {
+  display: flex;
+  position: fixed;
+  width: 75%;
+  left: 25%;
+  height: 5vh;
+  min-height: 30px;
+  background-color:blue;
+  z-index: 20;
+}
+
+.search input {
+  background-color:blueviolet;
+  width: 70%;
+  
+}
+
+.profile {
+  
+  background-color:rgb(104, 23, 179);
+  width: 30%;
+}
+
+
+.main {
+  position: absolute;
+  background-color:coral;
+  width: 75%;
+  height: 2000px;
+  top: max(5vh, 30px);
+  left: 25%;
+  z-index: 0;
+}
+
+section.container {
+  background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+
+}
+
+.item {
+  background-color:brown;
+  position: relative;
+  width: 50%;
+  height: 100px;
+  margin: 2vh;
+  
+}
+
+.item:nth-child(1) {
+  align-self: start;
+}
+
+.item:nth-child(2n) {
+  align-self: end;
+}
