@@ -249,7 +249,8 @@ ul.navigation {
   position: fixed;
   overflow-y: scroll;
   scrollbar-width: none;
-  background-color:coral;
+  /* background-color:coral; */
+  
   width: 73%;
   height: 100%;
   top: max(7vw, 30px);
@@ -265,10 +266,16 @@ ul.navigation {
 .main {
   position: absolute;
   width: 100%;
+  height: auto;
+  background-image: linear-gradient(rgba(36, 35, 40, 0.1) 60vw, rgba(36, 35, 40, 1), rgba(36, 35, 40, 1)),
+  url(resources/media/background_image1.png),
+  linear-gradient(rgb(36, 35, 40), rgb(36, 35, 40));
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 section.theses {
-  background-color: chartreuse;
+  /* background-color: chartreuse; */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -297,7 +304,7 @@ section.theses {
 }
 
 section.menu {
-  background-color:darkslateblue;
+  /* background-color:darkslateblue; */
   display: flex;
   position: relative;
   width: 100%;
