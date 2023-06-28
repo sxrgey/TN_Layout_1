@@ -1,7 +1,12 @@
+/* Reset */
 * {
 	padding: 0px;
 	margin: 0px;
 	border: none;
+}
+
+:root {
+  background-color: #F2F7FC;
 }
 
 header {
@@ -54,10 +59,48 @@ nav {
 aside {
   background-color:#FFFFFF;
   width: 86%;
-  height: 700px;
+  /* height: 700px; */
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
   position: relative;
   margin: 7%;
+  /* border: solid black 1px; */
+  border-radius: 1vw;
+}
+
+aside p {
+  color:#315B7C;
+  font-size: 2vw;
+  font-weight: 600;
+  padding-left: 0.8rem;
+  padding-top: 0.8rem;
+  padding-right: 1.4rem;
+  text-align: left;
+}
+
+aside img {
+  width: 50%;
+  /* height: 25%; */
+}
+
+aside a {
+  cursor: pointer;
+  background-color: #315B7C;
+  color: #FFFFFF;
+  padding: 1vw 3vw;
+  font-size: 2vw;
+  /* font-weight: 600; */
+  margin-bottom: 5.5vw;
+  border-radius: 1vw;
+  animation-timing-function: ease-in-out;
+  transition-duration: 200ms;
+}
+
+aside a:hover {
+  transform: scale(1.05);
 }
 
 ul.navigation {
@@ -74,11 +117,11 @@ ul.navigation {
 .navigation li {
   display: flex;
   align-items: center;
-  padding: 1.1rem;
+  padding: 1vw;
   margin-bottom: 0.4rem;
   border-radius: 0.9vw;
   font-size: max(1.3vw, 12px);
-  font-weight: 500;
+  font-weight: 800;
  
 }
 
@@ -171,8 +214,6 @@ ul.navigation {
   transform: scale(1.1);
 }
 
-
-
 .profile {
   display: flex;
   /* justify-content: end; */
@@ -204,17 +245,26 @@ ul.navigation {
   color: #666666;
 }
 
+.shell_main {
+  position: fixed;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background-color:coral;
+  width: 73%;
+  height: 100%;
+  top: max(7vw, 30px);
+  left: 25%;
+  border-radius: 10px;
+}
+
+.shell_main::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
 .main {
   position: absolute;
-  background-color:coral;
-  width: 73%;
-  height: 2000px;
-  top: max(7vw, 30px);
-  left: 25%;
-  /* z-index: 0; */
-  border-radius: 20px;
-  
+  width: 100%;
 }
 
 .top_buttons {
