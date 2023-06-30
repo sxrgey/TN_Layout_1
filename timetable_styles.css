@@ -28,11 +28,17 @@
 
 :root {
   background-color: #F2F7FC;
+  --background_color: #F2F7FC;
+  --main_text_color: #121212;
+  --blueaccent_color: #315B7C;
+  --white-color: #FFFFFF;
+  --redaccent_color: #FF5561;
+  --hover_color: #B1C2CF;
+  --active_color: #7E9AB0;
 }
 
 header {
-  background-color: #F2F7FC;
-  /* position: sticky; */
+  background-color: var(--background_color, #F2F7FC);
   width: 100%;
   display: flex;
 
@@ -69,25 +75,21 @@ p, a, button, li, input, input::placeholder {
 
 .left_panel {
   position: absolute;
-  /* overflow-y: scroll; */
-  background-color: #F2F7FC;
+  background-color: var(--background_color, #F2F7FC);
   display: flex;
   flex-direction: column;
-  /* bottom: 0; */
   top: 0;
   width: 25%;
-  /* height: 100vh; */
   
 }
 
 .sticky {
-  background-color: #F2F7FC;
+  background-color: var(--background_color, #F2F7FC);
   position: fixed;
   width: 25%;
   height: 100vh;
   overflow-y: scroll;
   scrollbar-width: none;
-  /* bottom: 0; */
 }
 
 .sticky::-webkit-scrollbar {
@@ -96,7 +98,7 @@ p, a, button, li, input, input::placeholder {
 }
 
 nav {
-  background-color: #F2F7FC;
+  background-color: var(--background_color, #F2F7FC);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -107,9 +109,8 @@ nav {
 }
 
 aside {
-  background-color:#FFFFFF;
+  background-color:var(--white-color, #FFFFFF);
   width: 86%;
-  /* height: 700px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,14 +118,11 @@ aside {
   gap: 3vw;
   position: relative;
   margin: 7%;
-  /* border: solid black 1px; */
   border-radius: 1vw;
 }
 
 aside h3 {
-  color:#315B7C;
-  /* font-size: 2vw; */
-  /* font-weight: 600; */
+  color: var(--blueaccent_color, #315B7C);
   padding-left: 0.8rem;
   padding-top: 0.8rem;
   padding-right: 1.4rem;
@@ -136,21 +134,17 @@ aside h3 {
 
 aside img {
   width: 50%;
-  /* height: 25%; */
 }
 
 aside a {
   cursor: pointer;
-  background-color: #315B7C;
-  color: #FFFFFF;
+  background-color: var(--blueaccent_color, #315B7C);
+  color: var(--white-color, #FFFFFF);
   padding: 1vw 3vw;
-  /* font-size: 1.2vw; */
-  /* font-weight: 600; */
   margin-bottom: 5.5vw;
   border-radius: 1vw;
   animation-timing-function: ease-in-out;
   transition-duration: 200ms;
-  /* font-family: 'Stem-Medium'; */
 
 }
 
@@ -159,7 +153,6 @@ aside a:hover {
 }
 
 ul.navigation {
-  /* background-color:aqua; */
   width: 88%;
   position: relative;
   list-style-type: none;
@@ -173,7 +166,6 @@ ul.navigation {
   display: flex;
   align-items: center;
   padding: 1vw;
-  /* margin-bottom: 0.4rem; */
   border-radius: 0.9vw;
   font-size: max(1.3vw, 12px);
   font-family: 'Stem-Medium';
@@ -190,31 +182,31 @@ ul.navigation {
 
 .navigation a {
   border-radius: 0.9vw;
-  color: #315B7C;
+  color: var(--blueaccent_color, #315B7C);
   text-decoration: none;
   cursor: pointer;
-  fill: #FF5561;
+  fill: var(--redaccent_color, #FF5561);
 }
 
 .menu_icon:hover {
-  fill: #FFFFFF;
+  fill: var(--white-color, #FFFFFF);
 }
 
 .navigation a:hover {
-  color: #FFFFFF;
-  fill: #FFFFFF;
+  color: var(--white-color, #FFFFFF);
+  fill: var(--white-color, #FFFFFF);
 }
 
 #active {
   background-color: #7E9AB0; 
-  color: #FFFFFF;
-  fill: #FFFFFF;
+  color: var(--white-color, #FFFFFF);
+  fill: var(--white-color, #FFFFFF);
 }
 
 .navigation li:hover {
-  background-color: #B1C2CF;
-  color: #FFFFFF;
-  fill: #FFFFFF;
+  background-color: var(--hover_color, #B1C2CF);
+  color: var(--white-color, #FFFFFF);
+  fill: var(--white-color, #FFFFFF);
 }
 
 .search {
@@ -224,13 +216,13 @@ ul.navigation {
   left: 25%;
   height: 7vw;
   min-height: 30px;
-  background-color:#F2F7FC;
+  background-color:var(--background_color, #F2F7FC);
   z-index: 20;
   align-items: center;
 }
 
 .search input {
-  background-color:#FFFFFF;
+  background-color:var(--white-color, #FFFFFF);
   height: 50%;
   width: 59%;
   padding-left: 2%;
@@ -241,19 +233,18 @@ ul.navigation {
 }
 
 .search input::placeholder {
-  color: #B1C2CF;
-  /* font-size: 1.1vw; */
+  color: var(--hover_color, #B1C2CF);
   transform:translateY(0.1vw);
   
 }
 
 .search button {
   cursor: pointer;
-  fill: #B1C2CF;
+  fill: var(--hover_color, #B1C2CF);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#FFFFFF;
+  background-color:var(--white-color, #FFFFFF);
   height: 50%;
   width: min(6%, 60px);
   border-bottom-right-radius: 0.9vw;
@@ -262,7 +253,7 @@ ul.navigation {
 }
 
 .search svg {
-  background-color: #FFFFFF;
+  background-color: var(--white-color, #FFFFFF);
 }
 
 .search svg:hover {
@@ -271,9 +262,8 @@ ul.navigation {
 
 .profile {
   display: flex;
-  /* justify-content: end; */
   align-items: center;
-  background-color:#F2F7FC;
+  background-color:var(--background_color, #F2F7FC);
   height: 100%;
   width: 33%;
 }
@@ -282,8 +272,6 @@ ul.navigation {
   position: relative;
   margin-left: 6%;
   height: 59%;
-  /* border-radius: 5vw;
-  border: solid black 0.2rem; */
 }
 
 .profile label {
@@ -304,8 +292,6 @@ ul.navigation {
   position: fixed;
   overflow-y: scroll;
   scrollbar-width: none;
-  /* background-color:coral; */
-  
   width: 73%;
   height: 100%;
   top: max(7vw, 30px);
@@ -330,8 +316,7 @@ ul.navigation {
 }
 
 section.theses {
-  /* background-color: chartreuse; */
-  color: #FFFFFF;
+  color: var(--white-color, #FFFFFF);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -343,37 +328,28 @@ section.theses {
 }
 
 .thesis {
-  /* background-color:rgba(165, 42, 42, 0.251); */
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: start;
   width: 50%;
-  /* height: 100px; */
   margin: 1vw 5.5vw;
 }
 
 .thesis h1 {
-  /* font-size: 4vw; */
   margin-bottom: 1vw;
 }
 
 .thesis h3 {
-  /* font-size: 1.9vw; */
   margin-bottom: 3vw;
-}
-
-.thesis p {
-  /* font-size: 1.5vw; */
 }
 
 .thesis a {
   cursor: pointer;
   width: auto;
-  background-color: #FF5561;
+  background-color: var(--redaccent_color, #FF5561);
   padding: 1vw 2vw;
   border-radius: 1vw;
-  /* font-size: 1.5vw; */
   transition-duration: 200ms;
 }
 
@@ -392,7 +368,6 @@ section.theses {
 }
 
 section.menu {
-  /* background-color:darkslateblue; */
   display: flex;
   position: relative;
   width: 100%;
@@ -407,7 +382,7 @@ section.menu {
   flex-direction: column;
   box-sizing: border-box;
   opacity: 0.8;
-  background-color: #F2F7FC;
+  background-color: var(--background_color, #F2F7FC);
   border-radius: 1vw;
   padding: 1.5vw;
   position: relative;
@@ -422,9 +397,8 @@ section.menu {
 .direction a {
   cursor: pointer;
   position: absolute;
-  color: #315B7C;
+  color: var(--blueaccent_color, #315B7C);
   display: flex;
-  /* font-size: 1.5vw; */
   align-items: center;
   bottom: 10%;
   right: 5vw;
@@ -439,14 +413,12 @@ section.menu {
 }
 
 .direction h3 {
-  color: #315B7C;
-  /* font-size: 2vw; */
+  color: var(--blueaccent_color, #315B7C);
   margin-bottom: 1.9vw;
 }
 
 .direction p {
-  color: #121212;
-  /* font-size: 1.5vw; */
+  color: var(--main_text_color, #121212);
 }
 
 .first_row {
@@ -462,26 +434,22 @@ section.menu {
 }
 
 .postscript {
-  /* background-color:forestgreen; */
-  color: #FFFFFF;
+  color: var(--white-color, #FFFFFF);
   display: flex;
   flex-direction: column;
   position: relative;
   width: 50%;
   margin-left: 8%;
   margin-top: 8%;
-  /* padding: 1.5rem; */
 }
 
 .postscript h1 {
-  /* font-size: 4vw; */
   margin-bottom: 2vw;
 }
 
 .postscript ul {
   list-style-position: inside;
   list-style-type: square;
-  /* font-size: 1.5vw; */
 }
 
 .postscript ul li {
@@ -491,31 +459,25 @@ section.menu {
 }
 
 .feedback {
-  color: #FFFFFF;
-  /* background-color:forestgreen; */
+  color: var(--white-color, #FFFFFF);
   display: flex;
   flex-direction: column;
   position: relative;
   width: 30%;
-  /* height: 200px; */
   margin-left: 8%;
   margin-top: 4%;
   margin-bottom: 10%;
 }
 
 .feedback h2 {
-  /* font-size: 3vw; */
   margin-bottom: 3vw;
   text-align: center;
-  border-left: solid #315B7C 0.5rem;
+  border-left: solid var(--blueaccent_color, #315B7C) 0.5rem;
 }
 
 .mans {
   display: flex;
-  /* background-color: blue; */
   gap: 20%;
-  /* width: 100%; */
-  /* height: 100%; */
 }
 
 .man {
@@ -529,7 +491,7 @@ section.menu {
 .man_photo {
   height: 7vw;
   border-radius: 50%;
-  border: solid #FFFFFF 0.3rem;
+  border: solid var(--white-color, #FFFFFF) 0.3rem;
 
 }
 
