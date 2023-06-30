@@ -5,6 +5,27 @@
 	border: none;
 }
 
+@font-face {
+  font-family: 'Stem-Bold';
+  src: url('resources/fonts/Stem-Bold.woff2') format('woff2'),
+       url('resources/fonts/Stem-Bold.woff') format('woff'),
+       url('resources/fonts/Stem-Bold.ttf') format('otf');
+}
+
+@font-face {
+  font-family: 'Stem-Medium';
+  src: url('resources/fonts/Stem-Medium.woff2') format('woff2'),
+       url('resources/fonts/Stem-Medium.woff') format('woff'),
+       url('resources/fonts/Stem-Medium.ttf') format('otf');
+}
+
+@font-face {
+  font-family: 'Manrope-Regular';
+  src: url('resources/fonts/Manrope-Regular.woff2') format('woff2'),
+       url('resources/fonts/Manrope-Regular.woff') format('woff'),
+       url('resources/fonts/Manrope-Regular.otf') format('otf');
+}
+
 :root {
   background-color: #F2F7FC;
 }
@@ -15,6 +36,35 @@ header {
   width: 100%;
   display: flex;
 
+}
+
+h1 {
+  font-size: 4vw;
+  font-family: 'Stem-Bold';
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+h2 {
+  font-size: 3vw;
+  font-family: 'Stem-Bold';
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+h3 {
+  font-size: 1.9vw;
+  font-family: 'Stem-Bold';
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+p, a, button, li, input, input::placeholder {
+  font-size: 1.15vw;
+  font-family: 'Manrope-Regular'; /*больше похоже, что он использоваля в макете*/
+  /* font-family: 'Stem-Medium'; */
+  line-height: 150%;
+  letter-spacing: 0%;
 }
 
 .left_panel {
@@ -71,14 +121,17 @@ aside {
   border-radius: 1vw;
 }
 
-aside p {
+aside h3 {
   color:#315B7C;
-  font-size: 2vw;
-  font-weight: 600;
+  /* font-size: 2vw; */
+  /* font-weight: 600; */
   padding-left: 0.8rem;
   padding-top: 0.8rem;
   padding-right: 1.4rem;
   text-align: left;
+  font-family: 'Stem-Bold';
+  line-height: 120%;
+  letter-spacing: 0%;
 }
 
 aside img {
@@ -91,12 +144,14 @@ aside a {
   background-color: #315B7C;
   color: #FFFFFF;
   padding: 1vw 3vw;
-  font-size: 2vw;
+  /* font-size: 1.2vw; */
   /* font-weight: 600; */
   margin-bottom: 5.5vw;
   border-radius: 1vw;
   animation-timing-function: ease-in-out;
   transition-duration: 200ms;
+  /* font-family: 'Stem-Medium'; */
+
 }
 
 aside a:hover {
@@ -118,10 +173,11 @@ ul.navigation {
   display: flex;
   align-items: center;
   padding: 1vw;
-  margin-bottom: 0.4rem;
+  /* margin-bottom: 0.4rem; */
   border-radius: 0.9vw;
   font-size: max(1.3vw, 12px);
-  font-weight: 800;
+  font-family: 'Stem-Medium';
+  font-weight: 500;
  
 }
 
@@ -137,8 +193,7 @@ ul.navigation {
   color: #315B7C;
   text-decoration: none;
   cursor: pointer;
-  fill: #FF5561
-  
+  fill: #FF5561;
 }
 
 .menu_icon:hover {
@@ -182,12 +237,12 @@ ul.navigation {
   border-bottom-left-radius: 0.9vw;
   border-top-left-radius: 0.9vw;
   outline: none;
-  font-size: 1.1vw;
+  /* font-size: 1.1vw; */
 }
 
 .search input::placeholder {
   color: #B1C2CF;
-  font-size: 1.1vw;
+  /* font-size: 2vw; */
   transform:translateY(0.1vw);
   
 }
@@ -236,11 +291,11 @@ ul.navigation {
 }
 
 .profile_name {
-  font-size: 1.2vw;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .profile_position {
+  font-family: 'Manrope-Regular';
   font-size: 1vw;
   color: #666666;
 }
@@ -289,7 +344,8 @@ ul.navigation {
   cursor: pointer;
   margin-right: 2vw;
   padding-top: 0rem;
-  font-size: 1.3vw;
+  font-family: 'Stem-Medium';
+  /* font-size: 1.3vw; */
   transition-duration: 200ms;
 }
 
@@ -325,6 +381,13 @@ section.theses {
   
 }
 
+.scope:hover {
+  transition-duration: 1000ms;
+}
+.scope:hover {
+  transform: scale(1.1);
+}
+
 .thesis label {
   display: flex;
   align-items: center;
@@ -332,11 +395,15 @@ section.theses {
   color: #ff55605f;
   /* opacity: 0.35; */
   margin-bottom: 1vw;
+  margin-right: 1.3vw;
+  font-family: 'Stem-Medium';
+  /* line-height: 100%; */
+  letter-spacing: 0%;
 }
 
 label.module {
   position: absolute;
-  font-size: 2vw;
+  font-size: 1.9vw;
   color: #FFFFFF;
 }
 
@@ -353,25 +420,25 @@ label.module {
 
 .thesis h1 {
   
-  font-size: 4vw;
+  /* font-size: 4vw; */
   text-align: start;
   margin-bottom: 1vw;
  
 }
 
 .thesis h3 {
-  font-size: 1.9vw;
+  /* font-size: 1.9vw; */
   margin-bottom: 3vw;
 }
 
 .thesis p {
-  font-size: 1.4vw;
+  margin-bottom: 1vw;
 }
 
 .thesis ul {
   list-style-position: inside;
   list-style-type: square;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
 }
 
 .thesis ul li {
@@ -386,7 +453,7 @@ label.module {
   background-color: #FF5561;
   padding: 1vw 2vw;
   border-radius: 1vw;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
   transition-duration: 200ms;
 }
 
@@ -415,7 +482,7 @@ label.module {
 
 .caption h3 {
   color:#FFFFFF;
-  font-size: 2vw;
+  /* font-size: 2vw; */
   margin-top: 4vw;
   margin-bottom: 1vw;
 }
@@ -441,6 +508,10 @@ label.module {
   margin: 1vw 2vw;
 }
 
+.possibility:hover {
+  transform: scale(1.03);
+}
+
 .possibility img {
   width: 20%;
 }
@@ -449,7 +520,7 @@ label.module {
   /* width: 70%; */
   color: #FFFFFF;
   text-align: center;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
   margin-top: 1vw;
 }
 
@@ -467,7 +538,7 @@ label.module {
 }
 
 .feedback h2 {
-  font-size: 3vw;
+  /* font-size: 3vw; */
   margin-bottom: 3vw;
   text-align: center;
   border-left: solid #315B7C 0.5rem;
