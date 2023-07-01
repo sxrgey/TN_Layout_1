@@ -167,7 +167,7 @@ ul.navigation {
   align-items: center;
   padding: 1vw;
   border-radius: 0.9vw;
-  font-size: max(1.3vw, 12px);
+  font-size: 1.3vw;
   font-family: 'Stem-Medium';
   font-weight: 500;
  
@@ -219,6 +219,10 @@ ul.navigation {
   background-color:var(--background_color, #F2F7FC);
   z-index: 20;
   align-items: center;
+}
+
+.search .mobile_icon {
+  display: none;
 }
 
 .search input {
@@ -499,3 +503,35 @@ section.menu {
   height: 3vw;
 }
 
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+  .left_panel, .search input, .search button, .profile {
+    display: none;
+  }
+  
+  .search {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    height: 8%;
+  }
+  .search .mobile_icon {
+    display: flex;
+    margin: 0 2vh;
+    align-items: center;
+  }
+
+  .mobile_icon img {
+    width: 5vh;
+  }
+
+  .shell_main {
+    width: 100%;
+    left: 0;
+    top: 8%;
+    border-radius: 0;
+  }
+  
+}
